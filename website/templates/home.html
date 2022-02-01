@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title%}
+  Home
+{% endblock%}
+
+{% block head%}
+  {% if current_user.is_authenticated %}
+  {{ current_user.username }}
+{% endif %}
+{% endblock %}
+
+{% block page%}
+  Home
+{%endblock%}
+
+{%block up%}
+#up
+{%endblock%}
+
+{%block p%}
+  Welcome to my website. I’m thrilled you’re here.
+{%endblock%}

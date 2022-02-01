@@ -1,0 +1,38 @@
+{% extends 'index.html' %}
+
+{%block title%}
+Log In
+{%endblock%}
+
+
+{%block form%}
+<form method="POST" class="form-register" style="color:whitesmoke;" action="">
+{{ form.hidden_tag() }}
+<img class="mb-4" src="../static/images/user.png" alt="user.png" width="72" height="57">
+    <h1 class="h3 mb-3 fw-normal">Log In</h1>
+
+    <div class="form-floating style="color:whitesmoke;"">
+        {{ form.email_address.label() }}
+        {{ form.email_address(class="form-control", placeholder="User Name") }}
+    </div>
+    <div class="form-floating">
+        {{ form.password.label() }}
+        {{ form.password(class="form-control", placeholder="Password") }}
+    </div>
+
+    <div class="checkbox">
+      {{ form.remember.label() }}
+      {{ form.remember(class="checkbox") }}
+    </div>
+    <br>
+    <div class="form-floating">
+        <h6>Do not have an account?</h6>
+        <a class="btn btn-sm btn-secondary" href="{{ url_for('signup') }}">Register</a>
+    </div>
+    <br>
+
+    {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+    </form>
+
+{%endblock%}
+
