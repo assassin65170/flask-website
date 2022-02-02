@@ -1,0 +1,41 @@
+{% extends 'index.html' %}
+
+{%block title%}
+Sign Up
+{%endblock%}
+
+{%block form%}
+<img class="mb-4" src="../static/images/add-user.png" alt="add-user.png" width="72" height="57">
+<h1 class="h3 mb-3 fw-normal w3-text-white">Please Create your Account</h1>
+<form method="POST" class="form-signin" action="">
+{{ form.hidden_tag() }}
+    <div class="form-floating">
+      {{ form.username.label() }}
+      {{ form.username(class="form-control", placeholder="User Name") }}
+    </div>
+    <br>
+    <div class="form-floating">
+      {{ form.email_address.label() }}
+      {{ form.email_address(class="form-control", placeholder="Email Address") }}
+    </div>
+    <br>
+    <div class="form-floating">
+      {{ form.password.label() }}
+      {{ form.password(class="form-control", placeholder="Password") }}
+    </div>
+    <br>
+    <div class="form-floating">
+      {{ form.password1.label() }}
+      {{ form.password1(class="form-control", placeholder="Confirm Password") }}
+    </div>
+    <br>
+    
+    <p><div class="w3-text-white">
+      <h6>Already have an account?</h6>
+      <a class="btn btn-sm btn-secondary" href="{{ url_for('login') }}">Login</a>
+    </div></p>
+
+    {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+    </form>
+
+{%endblock%}
