@@ -6,3 +6,4 @@ Flask_WTF==1.0.0
 WTForms==3.0.1
 gunicorn
 email_validator
+psycopg2
