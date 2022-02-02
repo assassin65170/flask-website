@@ -13,7 +13,7 @@ class Form(FlaskForm):
 
 class Login(FlaskForm):
     email_address = StringField(label='Email', validators=[Email(), DataRequired()])
-    password = PasswordField(label='Password:', validators=[DataRequired()])
+    password = PasswordField(label='Password', validators=[DataRequired()])
     remember = BooleanField(label='Remember Me')
     submit = SubmitField(label='Log in')
 
